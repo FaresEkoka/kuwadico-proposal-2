@@ -18,6 +18,11 @@ import InformationArchitectureFrame from "@/components/sections/InformationArchi
 import PerspectiveFrame from "@/components/sections/PerspectiveFrame";
 import BrandRealityFrame from "@/components/sections/BrandRealityFrame";
 import DesignPhilosophyFrame from "@/components/sections/DesignPhilosophyFrame";
+import WhatsIncludedFrame from "@/components/sections/WhatsIncludedFrame";
+import WebsiteFrame from "@/components/sections/WebsiteFrame";
+import SocialMediaFrame from "@/components/sections/SocialMediaFrame";
+import ProjectManagementFrame from "@/components/sections/ProjectManagementFrame";
+import TimelineInvestmentFrame from "@/components/sections/TimelineInvestmentFrame";
 import GovernanceFrame from "@/components/sections/GovernanceFrame";
 import RiskTransparencyFrame from "@/components/sections/RiskTransparencyFrame";
 import ApproachFrame from "@/components/sections/ApproachFrame";
@@ -120,6 +125,11 @@ export default function Home() {
         <PerspectiveFrame />
         <BrandRealityFrame />
         <DesignPhilosophyFrame />
+        <WhatsIncludedFrame />
+        <WebsiteFrame />
+        <SocialMediaFrame />
+        <ProjectManagementFrame />
+        <TimelineInvestmentFrame />
         <GovernanceFrame />
         <RiskTransparencyFrame />
         <ApproachFrame />

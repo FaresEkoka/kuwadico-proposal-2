@@ -17,8 +17,8 @@ const questrial = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Website Revamp Proposal | Flex Labs",
-  description: "A modern, high-credibility website experience proposal",
+  title: "Website & Social Media Proposal | Flex Labs",
+  description: "Website and social media proposal for Kuwadico - Grand Heights & Glory Phase II",
   viewport: {
     width: "device-width",
     initialScale: 1,

@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { content } from "@/content";
+import { content, getFrame } from "@/content";
 import Frame from "../Frame";
 import KeyHighlight from "../KeyHighlight";
 
@@ -11,14 +11,14 @@ const BRAND_SECTIONS = [
     items: [
       "Your existing logo and wordmark",
       "Core brand colors",
-      "Established positioning as a technology partner",
+      "Established positioning as a premium developer",
     ],
   },
   {
     header: "What we'll elevate",
     items: [
       "Typography system and hierarchy",
-      "Visual consistency across pages",
+      "Visual consistency across digital channels",
       "Imagery and tone of voice",
     ],
   },
@@ -33,7 +33,7 @@ const BRAND_SECTIONS = [
 ];
 
 export default function BrandRealityFrame() {
-  const frame = content.frames[11];
+  const frame = getFrame("brand-reality")!;
 
   return (
     <Frame id="brand-reality" className="bg-dark-lighter">
@@ -65,7 +65,7 @@ export default function BrandRealityFrame() {
             {frame.headline}
           </h2>
           <p className="text-sm md:text-base text-white/90 leading-relaxed font-sans font-normal tracking-wide">
-            Advansys already has the core elements — logo, colors, positioning. The problem isn&apos;t the brand itself. It&apos;s that the website isn&apos;t applying it with the consistency and confidence it deserves.
+            Kuwadico already has the core elements — logo, colors, positioning. The problem isn&apos;t the brand itself. It&apos;s that the digital presence isn&apos;t applying it with the consistency and confidence it deserves.
           </p>
         </motion.div>
 

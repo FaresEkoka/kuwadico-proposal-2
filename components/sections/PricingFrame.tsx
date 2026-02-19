@@ -5,23 +5,26 @@ import Frame from "../Frame";
 import LazyBackground from "../LazyBackground";
 
 const WHATS_INCLUDED = [
-  "7 unique page designs",
-  "Subpage adaptations",
-  "Responsive build (desktop + mobile)",
-  "CMS setup",
-  "Content placement",
-  "Handover documentation",
-  "8-week timeline",
+  "10 unique page designs",
+  "Lead tracking & CRM integration",
+  "Bilingual (English & Arabic)",
+  "Mobile-first responsive build",
+  "CMS setup and documentation",
+  "SEO optimized for West Cairo & Sheikh Zayed",
+  "8-week delivery timeline",
 ];
 
 const PAGE_BREAKDOWN = [
-  { page: "Home", detail: "unique design" },
-  { page: "Enterprise Cloud", detail: "unique + 4 subpages" },
-  { page: "Our Services", detail: "unique + 5 subpages" },
-  { page: "Blog", detail: "unique design" },
-  { page: "Case Studies", detail: "unique design" },
-  { page: "About Us", detail: "unique design" },
-  { page: "Contact", detail: "included" },
+  { page: "Home / Landing", detail: "unique design" },
+  { page: "About Kuwadico", detail: "corporate positioning" },
+  { page: "Grand Heights Overview", detail: "master plan showcase" },
+  { page: "Glory Phase II", detail: "phase-specific" },
+  { page: "Master District Overview", detail: "unique design" },
+  { page: "Smart Community", detail: "resident app" },
+  { page: "Commercial Offering", detail: "unique design" },
+  { page: "Investor Relations", detail: "unique design" },
+  { page: "Contact / Inquiry", detail: "CRM gateway" },
+  { page: "Blog / News", detail: "unique design" },
 ];
 
 export default function PricingFrame() {
@@ -44,7 +47,7 @@ export default function PricingFrame() {
             Transparent Pricing.
           </h2>
           <p className="text-sm md:text-base text-white/70 font-sans">
-            One package. Clear scope. No hidden costs.
+            Website package. Clear scope. Social media add-ons available.
           </p>
         </motion.div>
 
@@ -61,10 +64,10 @@ export default function PricingFrame() {
             {/* Title & Price */}
             <div className="mb-6">
               <div className="text-xs uppercase tracking-widest text-white/50 font-sans font-medium mb-4">
-                Complete Package
+                Website Package
               </div>
               <div className="font-sans font-bold text-4xl md:text-5xl text-accent-muted">
-                USD 8,000
+                USD 3,000
               </div>
             </div>
 
@@ -140,7 +143,7 @@ export default function PricingFrame() {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="text-sm text-white/50 font-sans italic text-center"
         >
-          Phased payments aligned to milestones. No hidden costs.
+          Phased payments aligned to milestones. No hidden costs. All prices are estimates pending discovery.
         </motion.p>
       </div>
     </Frame>

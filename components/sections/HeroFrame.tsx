@@ -1,13 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { content } from "@/content";
+import { content, getFrame } from "@/content";
 import Frame from "../Frame";
 import { useNavigation } from "@/context/NavigationContext";
 import { useAsset } from "@/context/AssetContext";
 
 export default function HeroFrame() {
-  const frame = content.frames[0];
+  const frame = getFrame("hero")!;
   const { scrollToSection } = useNavigation();
   const videoSrc = useAsset("/hero-video.mp4");
   const posterSrc = useAsset("/hero-fallback.jpg");
@@ -78,13 +78,13 @@ export default function HeroFrame() {
               Read Full Proposal →
             </button>
             <button
-              onClick={() => scrollToSection(16)} // Approach section
+              onClick={() => scrollToSection(21)} // Approach section
               className="px-5 sm:px-6 py-3 border border-white/20 text-white/90 font-semibold text-sm rounded-lg hover:border-accent-muted/50 hover:bg-white/5 transition-all duration-200 active:scale-95"
             >
               View Approach
             </button>
             <button
-              onClick={() => scrollToSection(20)} // Pricing section
+              onClick={() => scrollToSection(24)} // Pricing section
               className="px-5 sm:px-6 py-3 border border-white/10 text-white/70 font-medium text-sm rounded-lg hover:text-white/90 hover:border-white/30 transition-all duration-200 active:scale-95"
             >
               See Investment

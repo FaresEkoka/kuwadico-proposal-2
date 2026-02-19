@@ -97,7 +97,7 @@ export default function NavigationHeader() {
                     {/* Sections list */}
                     <div className="overflow-y-auto max-h-[calc(75vh-120px)] py-1">
                       {FRAME_IDS.map((id, index) => {
-                        const frame = content.frames[index];
+                        const frame = content.frames.find(f => f.id === id);
                         return (
                           <button
                             key={id}

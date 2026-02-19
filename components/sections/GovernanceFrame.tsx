@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { content } from "@/content";
+import { content, getFrame } from "@/content";
 import Frame from "../Frame";
 import KeyHighlight from "../KeyHighlight";
 
@@ -9,7 +9,7 @@ const TIMELINE_STEPS = [
   {
     title: "Single point of contact",
     description:
-      "One person from Forte Cloud owns all decisions — copy approvals, design direction, final sign-off. No committees. No \"let me check with the team.\" This alone prevents 80% of project delays.",
+      "One person from Kuwadico owns all decisions — copy approvals, design direction, final sign-off. No committees. No \"let me check with the team.\" This alone prevents 80% of project delays.",
   },
   {
     title: "Staged approvals",
@@ -29,7 +29,7 @@ const TIMELINE_STEPS = [
 ];
 
 export default function GovernanceFrame() {
-  const frame = content.frames[14];
+  const frame = getFrame("governance")!;
 
   return (
     <Frame id="governance" className="bg-dark-lighter">

@@ -7,10 +7,10 @@ import LazyBackground from "../LazyBackground";
 
 const QUICK_LINKS = [
   { label: "Overview", href: "#executive-summary" },
+  { label: "What's Included", href: "#whats-included" },
   { label: "Approach", href: "#approach" },
   { label: "Pricing", href: "#pricing" },
-  { label: "Success Criteria", href: "#success-criteria" },
-  { label: "Roadmap", href: "#future-roadmap" },
+  { label: "Timeline", href: "#timeline-investment" },
 ];
 
 export default function CTAFrame() {
@@ -42,19 +42,12 @@ export default function CTAFrame() {
           className="mb-12"
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-            That&apos;s everything.
+            Ready to Build?
           </h2>
           <p className="text-lg md:text-xl text-white/70 mb-8">
-            Questions? Thoughts? Let&apos;s talk.
+            Let&apos;s create a digital presence that reflects Kuwadico&apos;s vision.
           </p>
 
-          {/* Email */}
-          <a
-            href="mailto:morad@flexlabs.me"
-            className="inline-block text-lg md:text-xl text-white hover:text-accent-muted transition-colors mb-10 underline underline-offset-4 decoration-white/30 hover:decoration-accent-muted"
-          >
-            morad@flexlabs.me
-          </a>
         </motion.div>
 
         {/* Buttons */}
@@ -66,10 +59,10 @@ export default function CTAFrame() {
           className="flex flex-col sm:flex-row gap-4 mb-16"
         >
           <a
-            href="mailto:morad@flexlabs.me"
+            href="/downloads/Kuwadico_Commercial_Proposal.pdf"
             className="px-8 py-3 bg-accent-muted text-dark font-semibold rounded-lg hover:bg-accent-muted/90 transition-colors text-center"
           >
-            Email Morad →
+            Download Commercial Proposal →
           </a>
           <button
             onClick={handleShare}
@@ -137,7 +130,7 @@ export default function CTAFrame() {
             Flex Labs
           </div>
           <div className="text-xs uppercase tracking-widest text-white/20">
-            Prepared for Forte Cloud
+            Prepared for Kuwadico
           </div>
         </motion.div>
       </div>

@@ -1,18 +1,18 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { content } from "@/content";
+import { content, getFrame } from "@/content";
 import Frame from "../Frame";
 import KeyHighlight from "../KeyHighlight";
 
 const DESIGN_DESCRIPTIONS = [
-  "The site won't shout. No aggressive CTAs, no flashing banners, no clutter. Clean layouts, generous whitespace, and restrained motion that lets the content speak.",
-  "Enterprise authority without arrogance. Strong typography, clear hierarchy, and bold statements backed by proof. The design says \"we know what we're doing\" without saying it.",
+  "The site won't shout. No aggressive CTAs, no flashing banners, no clutter. Clean layouts, generous whitespace, and restrained motion that lets the developments speak for themselves.",
+  "Premium authority without arrogance. Strong typography, clear hierarchy, and confident statements backed by masterplan visuals and development details. The design says \"this is a serious developer\" without saying it.",
   "Current design patterns that signal relevance — not trends that will age in 6 months. Feels 2026, not 2018.",
 ];
 
 export default function DesignPhilosophyFrame() {
-  const frame = content.frames[12];
+  const frame = getFrame("design-philosophy")!;
 
   return (
     <Frame id="design-philosophy" className="bg-dark-lighter">

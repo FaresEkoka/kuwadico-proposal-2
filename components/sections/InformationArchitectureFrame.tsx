@@ -1,12 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { content } from "@/content";
+import { content, getFrame } from "@/content";
 import Frame from "../Frame";
 import KeyHighlight from "../KeyHighlight";
 
 export default function InformationArchitectureFrame() {
-  const frame = content.frames[9];
+  const frame = getFrame("information-architecture")!;
 
   return (
     <Frame id="information-architecture" className="bg-dark">

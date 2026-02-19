@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { content } from "@/content";
+import { content, getFrame } from "@/content";
 import Frame from "../Frame";
 
 const PERSPECTIVE_ITEMS = [
@@ -10,13 +10,13 @@ const PERSPECTIVE_ITEMS = [
     number: "1",
     title: "Clarity in seconds",
     description:
-      "The homepage must answer \"what do you do and why should I care\" within 5 seconds. No scrolling required. No guessing.",
+      "The homepage must answer \"what is Grand Heights and why should I care\" within 5 seconds. No scrolling required. No guessing.",
   },
   {
     number: "2",
     title: "Structure signals credibility",
     description:
-      "Enterprise buyers judge companies by how organized their information is. Messy navigation = messy company. Clear architecture = clear thinking.",
+      "Property buyers judge developers by how organized their information is. Messy navigation = messy developer. Clear architecture = clear thinking.",
   },
   {
     number: "3",
@@ -28,18 +28,18 @@ const PERSPECTIVE_ITEMS = [
     number: "4",
     title: "Proof over promises",
     description:
-      "Claims like \"industry-leading\" mean nothing. Specific numbers, named clients, and concrete outcomes build real credibility.",
+      "Claims like \"luxury living\" mean nothing. Masterplan visuals, renders, community features, and specific unit details build real credibility.",
   },
   {
     number: "5",
     title: "Design for the skeptic",
     description:
-      "Your most important visitors are the hardest to impress — senior buyers who've seen every pitch. The site must earn their trust, not assume it.",
+      "Your most important visitors are the hardest to impress — serious property buyers who've seen every developer pitch. The site must earn their trust, not assume it.",
   },
 ];
 
 export default function PerspectiveFrame() {
-  const frame = content.frames[10];
+  const frame = getFrame("perspective")!;
   const [isHovered, setIsHovered] = useState(false);
 
   return (

@@ -1,13 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { content } from "@/content";
+import { content, getFrame } from "@/content";
 import Frame from "../Frame";
 import ReadTimeIndicator from "../ReadTimeIndicator";
 import KeyHighlight from "../KeyHighlight";
 
 export default function ObjectiveFrame() {
-  const frame = content.frames[7];
+  const frame = getFrame("objective")!;
 
   return (
     <Frame id="objective" className="bg-dark-lighter">
@@ -69,7 +69,7 @@ export default function ObjectiveFrame() {
         </motion.div>
 
         <KeyHighlight delay={0.7}>
-          Success means perception aligns with reality — visitors immediately recognize the professionalism and innovation that already exists internally.
+          Success means qualified buyers discover Kuwadico online and see a digital presence that matches the quality of what&apos;s being built.
         </KeyHighlight>
       </div>
     </Frame>

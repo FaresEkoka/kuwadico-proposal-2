@@ -41,7 +41,7 @@ export default function ExecutiveSummaryFrame() {
               The Problem
             </div>
             <p className="text-base text-white/90 leading-relaxed">
-              Forte Cloud is the leading AWS partner in Egypt with proven cloud expertise, but the current website doesn&apos;t reflect this reality. It creates weak first impressions with clients, partners, and talent.
+              Kuwadico is developing one of the largest master-planned communities in West Cairo, but the current digital presence doesn&apos;t reflect the scale or quality of what&apos;s being built. It creates weak first impressions with buyers, investors, and partners.
             </p>
           </motion.div>
 
@@ -56,7 +56,7 @@ export default function ExecutiveSummaryFrame() {
               The Solution
             </div>
             <p className="text-base text-white/90 leading-relaxed">
-              A modern, credibility-first website designed to elevate perception, inspire internal pride, and establish Forte Cloud as the leading AWS partner and cloud transformation expert across Egypt and MENA.
+              A 10-page bilingual website and social media strategy designed to position Kuwadico as West Cairo&apos;s premier residential destination, showcase Grand Heights &amp; Glory Phase II, and generate qualified leads.
             </p>
           </motion.div>
 
@@ -71,7 +71,7 @@ export default function ExecutiveSummaryFrame() {
               The Approach
             </div>
             <p className="text-base text-white/90 leading-relaxed">
-              Three clear phases over 8 weeks: Foundation (sitemap & wireframes), Design (visual system & high-fidelity designs), and Build & Launch (development & deployment).
+              Three clear phases over 8 weeks: Discovery &amp; Content Strategy, Website Design, and Development &amp; Launch — plus ongoing social media management packages.
             </p>
           </motion.div>
 
@@ -86,7 +86,7 @@ export default function ExecutiveSummaryFrame() {
               The Investment
             </div>
             <p className="text-base text-white/90 leading-relaxed">
-              USD 8,000 for 7 unique page designs with subpage adaptations, responsive build, CMS setup, and handover documentation. Transparent pricing with no hidden costs.
+              USD 3,000 for a 10-page bilingual website with CRM integration, plus social media packages from $500/mo. Transparent pricing with no hidden costs.
             </p>
           </motion.div>
         </div>

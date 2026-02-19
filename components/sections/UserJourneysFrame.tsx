@@ -1,12 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { content } from "@/content";
+import { content, getFrame } from "@/content";
 import Frame from "../Frame";
 import KeyHighlight from "../KeyHighlight";
 
 export default function UserJourneysFrame() {
-  const frame = content.frames[8];
+  const frame = getFrame("user-journeys")!;
 
   return (
     <Frame id="user-journeys" className="bg-dark-lighter">

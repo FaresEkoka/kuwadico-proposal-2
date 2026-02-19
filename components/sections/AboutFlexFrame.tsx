@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { content } from "@/content";
+import { content, getFrame } from "@/content";
 import Frame from "../Frame";
 import ReadTimeIndicator from "../ReadTimeIndicator";
 
@@ -15,7 +15,7 @@ const clientLogos = [
 ];
 
 export default function AboutFlexFrame() {
-  const frame = content.frames[1];
+  const frame = getFrame("about-flex")!;
 
   const stats = [
     { value: "4,000+", label: "employees impacted through operational redesigns" },

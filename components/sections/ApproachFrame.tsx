@@ -2,59 +2,61 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { content } from "@/content";
+import { content, getFrame } from "@/content";
 import Frame from "../Frame";
 import LazyBackground from "../LazyBackground";
 import ReadTimeIndicator from "../ReadTimeIndicator";
 import KeyHighlight from "../KeyHighlight";
 
 const PHASE_DETAILS: Record<string, { activities: string[]; deliverables: string[]; dependencies?: string; milestones: string[]; weeks: string }> = {
-  "Phase 1 — Foundation": {
-    weeks: "Week 1",
+  "Phase 1 — Discovery & Content Strategy": {
+    weeks: "Week 1-2",
     activities: [
       "Stakeholder interviews and requirements gathering",
-      "Competitive analysis and best practices research",
-      "Content audit and messaging framework development",
-      "Information architecture design and validation",
+      "Competitive analysis of premium real estate developer sites",
+      "Content audit and messaging framework for Grand Heights & Glory",
+      "Information architecture design and social media strategy",
     ],
     deliverables: [
       "Complete sitemap documentation",
       "Page architecture diagrams",
-      "Content structure recommendations",
-      "Wireframes for all key pages",
+      "Content structure and messaging guide",
+      "Wireframes for all 10 pages",
+      "Social media strategy document",
     ],
-    milestones: ["Sitemap approved", "Wireframes complete"],
+    milestones: ["Sitemap approved", "Wireframes complete", "Social strategy approved"],
   },
-  "Phase 2 — Design": {
-    weeks: "Week 2–5",
+  "Phase 2 — Website Design": {
+    weeks: "Week 3-5",
     activities: [
       "Design system development",
-      "Visual design exploration",
+      "Visual design for property showcases",
       "Component library creation",
-      "Responsive design implementation",
+      "Responsive design (desktop + mobile)",
+      "Bilingual layout design (English & Arabic)",
     ],
     deliverables: [
       "Complete design system",
-      "High-fidelity designs for all pages",
+      "High-fidelity designs for all 10 pages",
       "Mobile and tablet responsive designs",
       "Interactive prototypes",
     ],
     dependencies: "Requires Phase 1 approval",
     milestones: ["Design system approved", "All designs complete"],
   },
-  "Phase 3 — Build & Launch": {
-    weeks: "Week 5–8",
+  "Phase 3 — Development & Launch": {
+    weeks: "Week 5-8",
     activities: [
-      "Frontend development",
-      "Content integration",
-      "Performance optimization",
-      "Cross-browser testing",
+      "Frontend development with bilingual CMS",
+      "CRM lead capture integration",
+      "SEO optimization for West Cairo & Sheikh Zayed",
+      "Performance optimization and cross-browser testing",
     ],
     deliverables: [
-      "Fully functional website",
-      "Performance optimized build",
-      "QA documentation",
-      "Launch support and training",
+      "Fully functional 10-page bilingual website",
+      "CRM integration and lead tracking",
+      "SEO-optimized build",
+      "QA documentation and launch support",
     ],
     dependencies: "Requires Phase 2 approval",
     milestones: ["Development complete", "Launch"],
@@ -62,7 +64,7 @@ const PHASE_DETAILS: Record<string, { activities: string[]; deliverables: string
 };
 
 export default function ApproachFrame() {
-  const frame = content.frames[16];
+  const frame = getFrame("approach")!;
   const [expandedPhase, setExpandedPhase] = useState<string | null>(null);
 
   return (

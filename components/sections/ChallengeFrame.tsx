@@ -1,13 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { content } from "@/content";
+import { content, getFrame } from "@/content";
 import Frame from "../Frame";
 import ReadTimeIndicator from "../ReadTimeIndicator";
 import KeyHighlight from "../KeyHighlight";
 
 export default function ChallengeFrame() {
-  const frame = content.frames[6];
+  const frame = getFrame("challenge")!;
 
   return (
     <Frame id="challenge" className="bg-dark">
@@ -69,7 +69,7 @@ export default function ChallengeFrame() {
         </motion.div>
 
         <KeyHighlight delay={0.7}>
-          This isn&apos;t about fixing what&apos;s broken — it&apos;s about closing the gap between who you are and how you appear.
+          This isn&apos;t about fixing what&apos;s broken — it&apos;s about closing the gap between what Kuwadico is building and how it appears online.
         </KeyHighlight>
       </div>
     </Frame>

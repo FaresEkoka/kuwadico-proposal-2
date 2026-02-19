@@ -159,7 +159,7 @@ export default function LoadingScreen({ onLoadComplete }: LoadingScreenProps) {
           transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
           className="text-3xl md:text-4xl font-light tracking-wide text-white mb-10"
         >
-          Website Proposal
+          Website & Social Media Proposal
         </motion.h1>
 
         {/* Please wait message */}
@@ -257,7 +257,7 @@ export default function LoadingScreen({ onLoadComplete }: LoadingScreenProps) {
         transition={{ duration: 0.8, delay: 0.6 }}
         className="absolute bottom-8 text-xs font-light uppercase tracking-[0.2em] text-white/20"
       >
-        Prepared for Forte Cloud
+        Prepared for Kuwadico
       </motion.div>
     </motion.div>
   );

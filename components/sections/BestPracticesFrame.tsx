@@ -1,13 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { content } from "@/content";
+import { content, getFrame } from "@/content";
 import Frame from "../Frame";
 import ReadTimeIndicator from "../ReadTimeIndicator";
 import KeyHighlight from "../KeyHighlight";
 
 export default function BestPracticesFrame() {
-  const frame = content.frames[4];
+  const frame = getFrame("best-practices")!;
 
   return (
     <Frame id="best-practices" className="bg-dark-lighter">
@@ -69,7 +69,7 @@ export default function BestPracticesFrame() {
         </motion.div>
 
         <KeyHighlight delay={0.7}>
-          This prevents the common enterprise mistake of: &apos;Explaining everything equally and clarifying nothing.&apos;
+          This prevents the common developer website mistake of: &apos;Showing everything without guiding the buyer to act.&apos;
         </KeyHighlight>
       </div>
     </Frame>

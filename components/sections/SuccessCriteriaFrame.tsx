@@ -7,23 +7,23 @@ import LazyBackground from "../LazyBackground";
 const SUCCESS_CRITERIA = [
   {
     number: "01",
-    statement: "A first-time visitor understands what Forte Cloud does within 10 seconds of landing on the homepage.",
+    statement: "A first-time visitor understands Grand Heights within 10 seconds of landing on the homepage.",
   },
   {
     number: "02",
-    statement: "The sales team actively uses the website when engaging enterprise clients.",
+    statement: "The sales team actively uses the website when engaging potential buyers.",
   },
   {
     number: "03",
-    statement: "Forte Cloud's position as Egypt's leading AWS partner is immediately clear.",
+    statement: "Kuwadico's position as West Cairo's premier developer is immediately clear.",
   },
   {
     number: "04",
-    statement: "New hires can understand the company's expertise and market position.",
+    statement: "Qualified leads are captured and tracked through integrated CRM.",
   },
   {
     number: "05",
-    statement: "The site structure scales for new services and case studies.",
+    statement: "The site structure scales for new phases and sub-developer showcases.",
   },
 ];
 

@@ -2,31 +2,31 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { content } from "@/content";
+import { content, getFrame } from "@/content";
 import Frame from "../Frame";
 import KeyHighlight from "../KeyHighlight";
 
 const EXPLANATIONS: Record<string, { current: string; target: string }> = {
-  "Visually outdated": {
-    current: "Current design language feels dated, using patterns and styles from 5+ years ago. This creates immediate perception of being behind the times.",
-    target: "Modern, clean design that feels current and forward-thinking. Uses contemporary patterns that signal innovation and relevance.",
+  "Limited digital visibility": {
+    current: "The current website has minimal presence in search results and doesn't effectively showcase the scale of Kuwadico's developments.",
+    target: "A modern, SEO-optimized website that ranks for West Cairo and Sheikh Zayed real estate searches and showcases Grand Heights prominently.",
   },
-  "Inconsistent brand signals": {
-    current: "Mixed messaging and visual styles across pages create confusion about brand identity and values.",
-    target: "Cohesive brand expression throughout, with clear visual hierarchy and consistent messaging that reinforces brand values.",
+  "Inconsistent brand presentation": {
+    current: "Mixed messaging and visual styles across digital touchpoints create confusion about brand identity and positioning.",
+    target: "Unified brand expression across website and social media, with clear visual hierarchy reinforcing Kuwadico's premium positioning.",
   },
-  "Low confidence cues": {
-    current: "Layout and content structure don't convey professionalism or expertise. Missing trust signals that enterprise buyers expect.",
-    target: "High-trust design with clear proof points, professional presentation, and confidence-building elements integrated naturally.",
+  "No lead capture or tracking": {
+    current: "No integrated CRM or lead forms means potential buyer interest goes uncaptured and untracked.",
+    target: "CRM-integrated lead capture with real-time tracking, enabling the sales team to follow up with qualified prospects.",
   },
-  "Reactive page structure": {
-    current: "Pages built reactively without strategic information architecture. Content feels scattered and hard to navigate.",
-    target: "Strategic structure designed for scalability. Clear information hierarchy that supports both current needs and future growth.",
+  "Minimal social media presence": {
+    current: "Limited or inactive social media channels mean missed opportunities for community building and buyer engagement.",
+    target: "Active, managed social media presence with consistent branding, community engagement, and content that drives traffic to the website.",
   },
 };
 
 export default function CurrentVsTargetFrame() {
-  const frame = content.frames[5];
+  const frame = getFrame("current-vs-target")!;
   const [isHovered, setIsHovered] = useState(false);
 
   const currentItems = frame.currentState?.items || [];
@@ -171,7 +171,7 @@ export default function CurrentVsTargetFrame() {
         </motion.div>
 
         <KeyHighlight delay={0.8}>
-          The proposed website is designed explicitly to close this gap.
+          The proposed website and social media strategy are designed to close this gap.
         </KeyHighlight>
       </div>
     </Frame>

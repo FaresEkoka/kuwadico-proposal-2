@@ -1,13 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { content } from "@/content";
+import { content, getFrame } from "@/content";
 import Frame from "../Frame";
 import ReadTimeIndicator from "../ReadTimeIndicator";
 import KeyHighlight from "../KeyHighlight";
 
 export default function ContextFrame() {
-  const frame = content.frames[2];
+  const frame = getFrame("context")!;
 
   return (
     <Frame id="context" className="bg-dark-lighter">
@@ -92,7 +92,7 @@ export default function ContextFrame() {
 
         {/* Bottom: Key highlights */}
         <KeyHighlight delay={0.8}>
-          The capabilities exist — but the site doesn&apos;t reflect them yet.
+          The development is world-class — but the digital presence doesn&apos;t reflect it yet.
         </KeyHighlight>
 
         {frame.conclusion && (

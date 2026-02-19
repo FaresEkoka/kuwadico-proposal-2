@@ -1,12 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { content } from "@/content";
+import { content, getFrame } from "@/content";
 import Frame from "../Frame";
 import KeyHighlight from "../KeyHighlight";
 
 export default function BusinessContextFrame() {
-  const frame = content.frames[3];
+  const frame = getFrame("business-context")!;
 
   return (
     <Frame id="business-context" className="bg-dark">

@@ -6,11 +6,11 @@ import LazyBackground from "../LazyBackground";
 import KeyHighlight from "../KeyHighlight";
 
 const FOUNDATION_ITEMS = [
-  "Add new service pages without design work",
-  "Publish case studies that actually get read",
-  "Build landing pages for campaigns in hours, not weeks",
-  "Expand to regional sites (Saudi, UAE) with consistent branding",
-  "Integrate tools like HubSpot or analytics without rebuilding",
+  "Launch new development phases without redesigning the site",
+  "Showcase sub-developer partnerships (Porto Group, Mountain View, Badreldin)",
+  "Build campaign landing pages for Glory Phase II in hours, not weeks",
+  "Integrate community app and property portal features",
+  "Scale to regional investor sites with consistent branding",
 ];
 
 export default function FutureRoadmapFrame() {
