@@ -1,0 +1,231 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-base: var(--font-questrial), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --font-header: var(--font-milker), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+
+  * {
+    font-family: var(--font-base);
+  }
+
+  body {
+    @apply bg-dark text-white antialiased;
+    font-family: var(--font-base);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-header);
+    letter-spacing: 0.05em !important;
+    /* Weights controlled via Tailwind classes (font-light, font-medium, font-bold, etc.) */
+  }
+  
+  h1.tracking-tighter, h2.tracking-tighter, h3.tracking-tighter, 
+  h4.tracking-tighter, h5.tracking-tighter, h6.tracking-tighter {
+    letter-spacing: 0.05em !important;
+  }
+  
+  h1.tracking-tight, h2.tracking-tight, h3.tracking-tight, 
+  h4.tracking-tight, h5.tracking-tight, h6.tracking-tight {
+    letter-spacing: 0.05em !important;
+  }
+
+  p, span, div, li, ul, ol, a, button {
+    font-family: var(--font-base);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 100%;
+    -webkit-overflow-scrolling: touch;
+    -webkit-tap-highlight-color: transparent;
+    /* Hide scrollbar for all browsers */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+  }
+
+  /* Mobile-specific scroll snap behavior */
+  @media screen and (max-width: 768px) {
+    html {
+      scroll-snap-type: y proximity;
+    }
+  }
+
+  html::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+
+  body {
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    -webkit-overflow-scrolling: touch;
+    -webkit-text-size-adjust: 100%;
+    /* Hide scrollbar for all browsers */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+  }
+
+  body::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+
+  #__next {
+    height: 100%;
+  }
+
+  /* Mobile viewport optimization for iOS */
+  @supports (-webkit-touch-callout: none) {
+    html {
+      height: -webkit-fill-available;
+    }
+    body {
+      min-height: 100vh;
+      min-height: -webkit-fill-available;
+    }
+  }
+
+  /* Mobile-specific scroll snap behavior - less aggressive */
+  @media screen and (max-width: 768px) {
+    html {
+      scroll-snap-type: y proximity;
+      -webkit-text-size-adjust: 100%;
+      -moz-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+    }
+  }
+
+  /* Prevent horizontal scroll issues */
+  * {
+    overscroll-behavior-x: none;
+  }
+}
+
+@layer utilities {
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 9999;
+    mix-blend-mode: overlay;
+  }
+
+  .text-shadow-soft {
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+  }
+
+  /* Improved text contrast utilities */
+  .text-readable {
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .text-readable-muted {
+    color: rgba(255, 255, 255, 0.75);
+  }
+
+  .text-readable-subtle {
+    color: rgba(255, 255, 255, 0.65);
+  }
+
+  .glass-border {
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(21, 21, 21, 0.6);
+    backdrop-filter: blur(10px);
+  }
+
+  .minimal-divider {
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.1), transparent);
+  }
+
+  .vertical-text {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+  }
+
+  /* Enhanced presentation-style typography */
+  .presentation-headline {
+    font-weight: 900;
+    letter-spacing: 0.05em !important;
+    line-height: 0.85;
+  }
+
+  .presentation-section {
+    border-left: 1px solid rgba(255, 255, 255, 0.08);
+    padding-left: 2rem;
+  }
+
+  .presentation-card {
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    background: rgba(10, 10, 10, 0.4);
+    backdrop-filter: blur(20px);
+  }
+
+  /* Better bullet/icon alignment - vertically center with text baseline */
+  /* Override mt-1 for bullets to center them better with text */
+  .flex.items-start > .text-accent-muted.mt-1 {
+    margin-top: 0.125em !important;
+  }
+
+  /* For arrow icons in expandable sections */
+  .flex.items-start > span.text-accent-muted.mt-1 {
+    margin-top: 0.125em !important;
+  }
+
+  /* Marquee animation for logo scroll */
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-marquee {
+    animation: marquee 20s linear infinite;
+  }
+
+  .animate-marquee:hover {
+    animation-play-state: paused;
+  }
+
+  /* Mobile optimizations - minimal, non-intrusive */
+  @media screen and (max-width: 768px) {
+    /* Smoother scrolling and better touch handling */
+    * {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    /* Reduce backdrop blur on mobile for better performance */
+    .glass-border, .presentation-card {
+      backdrop-filter: blur(5px);
+    }
+
+    /* Better touch scrolling areas */
+    .overflow-y-auto, .overflow-x-auto {
+      -webkit-overflow-scrolling: touch;
+      overscroll-behavior: contain;
+    }
+
+    /* Prevent horizontal scroll issues */
+    body, html {
+      overscroll-behavior-x: none;
+      overscroll-behavior-y: auto;
+    }
+  }
+}

@@ -1,0 +1,7 @@
+cd H:\Proposal
+git init
+git remote add origin https://github.com/moradbasha/Proposal-.git
+git add .
+git commit -m "Initial commit: Next.js proposal website with custom fonts and responsive layout"
+git branch -M main
+git push -u origin main
