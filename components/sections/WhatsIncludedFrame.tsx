@@ -142,7 +142,7 @@ export default function WhatsIncludedFrame() {
                               {card.details.tiers.map((tier: any, i: number) => (
                                 <div key={i} className="flex items-center justify-between text-[13px]">
                                   <span className="text-white/90">{tier.name}</span>
-                                  <span className="text-accent-muted font-medium">{tier.price}</span>
+                                  <span className="text-red-500 font-medium">{tier.price}</span>
                                 </div>
                               ))}
                             </div>

@@ -25,11 +25,6 @@ import ProjectManagementFrame from "@/components/sections/ProjectManagementFrame
 import TimelineInvestmentFrame from "@/components/sections/TimelineInvestmentFrame";
 import GovernanceFrame from "@/components/sections/GovernanceFrame";
 import RiskTransparencyFrame from "@/components/sections/RiskTransparencyFrame";
-import ApproachFrame from "@/components/sections/ApproachFrame";
-import SuccessCriteriaFrame from "@/components/sections/SuccessCriteriaFrame";
-import FutureRoadmapFrame from "@/components/sections/FutureRoadmapFrame";
-import PricingFrame from "@/components/sections/PricingFrame";
-import CTAFrame from "@/components/sections/CTAFrame";
 import ScrollIndicator from "@/components/ScrollIndicator";
 import ProgressCounter from "@/components/ProgressCounter";
 import NavigationHeader from "@/components/NavigationHeader";
@@ -132,11 +127,6 @@ export default function Home() {
         <TimelineInvestmentFrame />
         <GovernanceFrame />
         <RiskTransparencyFrame />
-        <ApproachFrame />
-        <SuccessCriteriaFrame />
-        <FutureRoadmapFrame />
-        <PricingFrame />
-        <CTAFrame />
       </main>
     </>
   );

@@ -35,13 +35,10 @@ export default function HeroFrame() {
           <div className="text-[10px] sm:text-xs uppercase tracking-wider text-white/70 font-medium">
             {content.proposal.preparedBy} × {content.client.name}
           </div>
-          <div className="text-[10px] sm:text-xs uppercase tracking-wider text-white/70 font-medium">
-            {content.client.group}
-          </div>
         </div>
 
         {/* Center Content */}
-        <div className="flex-1 flex flex-col justify-center">
+        <div className="flex-1 flex flex-col justify-center pb-16 sm:pb-20 md:pb-24">
           <motion.div
             initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
             animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
@@ -78,13 +75,13 @@ export default function HeroFrame() {
               Read Full Proposal →
             </button>
             <button
-              onClick={() => scrollToSection(21)} // Approach section
+              onClick={() => scrollToSection(17)} // Project Management section
               className="px-5 sm:px-6 py-3 border border-white/20 text-white/90 font-semibold text-sm rounded-lg hover:border-accent-muted/50 hover:bg-white/5 transition-all duration-200 active:scale-95"
             >
               View Approach
             </button>
             <button
-              onClick={() => scrollToSection(24)} // Pricing section
+              onClick={() => scrollToSection(18)} // Timeline & Investment section
               className="px-5 sm:px-6 py-3 border border-white/10 text-white/70 font-medium text-sm rounded-lg hover:text-white/90 hover:border-white/30 transition-all duration-200 active:scale-95"
             >
               See Investment
@@ -112,7 +109,6 @@ export default function HeroFrame() {
           >
             <div className="text-[10px] sm:text-xs uppercase tracking-wider text-white/70 space-y-0.5 sm:space-y-1 font-medium">
               <div>CLIENT: {content.client.name.toUpperCase()}</div>
-              <div>GROUP: {content.client.group.toUpperCase()}</div>
               <div>PREPARED BY: {content.proposal.preparedBy.toUpperCase()}</div>
             </div>
           </motion.div>

@@ -29,12 +29,6 @@ const SECTION_TAGS: Record<string, string[]> = {
   "governance": ["Process", "Management"],
   "risks": ["Process", "Planning"],
   "risk-transparency": ["Process", "Planning", "Trust"],
-  "approach": ["Process", "Execution"],
-  "deliverables": ["Execution", "Output"],
-  "success-criteria": ["Execution", "Metrics"],
-  "future-roadmap": ["Strategy", "Future"],
-  "pricing": ["Commercial"],
-  "cta": ["Engagement"],
 };
 
 const ALL_TAGS = Array.from(new Set(Object.values(SECTION_TAGS).flat()));

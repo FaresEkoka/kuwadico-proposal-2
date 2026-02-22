@@ -20,11 +20,6 @@ export const FRAME_IDS = [
   "timeline-investment",
   "governance",
   "risk-transparency",
-  "approach",
-  "success-criteria",
-  "future-roadmap",
-  "pricing",
-  "cta",
 ] as const;
 
 export const SECTION_NAMES = [
@@ -49,9 +44,4 @@ export const SECTION_NAMES = [
   "Timeline & Investment",
   "Governance",
   "Risk Transparency",
-  "Approach",
-  "Success Criteria",
-  "Future Roadmap",
-  "Pricing",
-  "CTA",
 ] as const;

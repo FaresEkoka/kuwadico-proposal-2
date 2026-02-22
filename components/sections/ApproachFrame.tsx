@@ -33,7 +33,7 @@ const PHASE_DETAILS: Record<string, { activities: string[]; deliverables: string
       "Visual design for property showcases",
       "Component library creation",
       "Responsive design (desktop + mobile)",
-      "Bilingual layout design (English & Arabic)",
+      "Property showcase and gallery layouts",
     ],
     deliverables: [
       "Complete design system",
@@ -47,13 +47,13 @@ const PHASE_DETAILS: Record<string, { activities: string[]; deliverables: string
   "Phase 3 — Development & Launch": {
     weeks: "Week 5-8",
     activities: [
-      "Frontend development with bilingual CMS",
+      "Frontend development with CMS integration",
       "CRM lead capture integration",
       "SEO optimization for West Cairo & Sheikh Zayed",
       "Performance optimization and cross-browser testing",
     ],
     deliverables: [
-      "Fully functional 10-page bilingual website",
+      "Fully functional 10-page website",
       "CRM integration and lead tracking",
       "SEO-optimized build",
       "QA documentation and launch support",

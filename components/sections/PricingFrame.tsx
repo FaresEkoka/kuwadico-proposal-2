@@ -7,7 +7,6 @@ import LazyBackground from "../LazyBackground";
 const WHATS_INCLUDED = [
   "10 unique page designs",
   "Lead tracking & CRM integration",
-  "Bilingual (English & Arabic)",
   "Mobile-first responsive build",
   "CMS setup and documentation",
   "SEO optimized for West Cairo & Sheikh Zayed",
@@ -66,7 +65,7 @@ export default function PricingFrame() {
               <div className="text-xs uppercase tracking-widest text-white/50 font-sans font-medium mb-4">
                 Website Package
               </div>
-              <div className="font-sans font-bold text-4xl md:text-5xl text-accent-muted">
+              <div className="font-sans font-bold text-4xl md:text-5xl text-red-500">
                 USD 3,000
               </div>
             </div>

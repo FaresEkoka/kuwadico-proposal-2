@@ -56,7 +56,7 @@ export default function ExecutiveSummaryFrame() {
               The Solution
             </div>
             <p className="text-base text-white/90 leading-relaxed">
-              A 10-page bilingual website and social media strategy designed to position Kuwadico as West Cairo&apos;s premier residential destination, showcase Grand Heights &amp; Glory Phase II, and generate qualified leads.
+              A 10-page website and social media strategy designed to position Kuwadico as West Cairo&apos;s premier residential destination, showcase Grand Heights &amp; Glory Phase II, and generate qualified leads.
             </p>
           </motion.div>
 
@@ -86,7 +86,7 @@ export default function ExecutiveSummaryFrame() {
               The Investment
             </div>
             <p className="text-base text-white/90 leading-relaxed">
-              USD 3,000 for a 10-page bilingual website with CRM integration, plus social media packages from $500/mo. Transparent pricing with no hidden costs.
+              <span className="text-red-500">USD 3,000</span> for a 10-page website with CRM integration and lead tracking, plus social media packages from <span className="text-red-500">$500/mo</span>. Transparent pricing with no hidden costs.
             </p>
           </motion.div>
         </div>

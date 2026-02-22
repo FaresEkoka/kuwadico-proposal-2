@@ -130,7 +130,7 @@ export default function TimelineInvestmentFrame() {
                 </div>
                 <div className="text-xs text-white/40">{item.detail}</div>
               </div>
-              <div className="text-2xl md:text-3xl font-bold text-accent-muted">
+              <div className="text-2xl md:text-3xl font-bold text-red-500">
                 {item.price}
               </div>
             </div>

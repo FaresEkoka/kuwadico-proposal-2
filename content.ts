@@ -156,7 +156,7 @@ export const content = {
         "10 focused pages covering every key touchpoint",
         "Strong page-level narratives for each development phase",
         "Clear property showcases with inquiry integration",
-        "Bilingual structure (English & Arabic) from day one",
+        "Lead tracking and performance reporting built in",
       ],
       conclusion:
         "This prevents the common developer website mistake of: 'Showing everything without guiding the buyer to act.'",
@@ -302,7 +302,7 @@ export const content = {
           items: [
             "Clean frontend implementation",
             "CRM lead capture integration",
-            "Bilingual CMS setup (English & Arabic)",
+            "CMS setup and content management",
             "Performance, QA, and launch support",
           ],
         },
@@ -315,7 +315,7 @@ export const content = {
       headline: "Everything needed for a modern, credible digital presence.",
       items: [
         "10 unique page designs",
-        "Bilingual implementation (English & Arabic)",
+        "Lead tracking & performance reporting",
         "Responsive build (desktop + mobile)",
         "CMS setup, CRM integration, and documentation",
       ],
@@ -356,11 +356,10 @@ export const content = {
           subtitle: "Full website design and build",
           price: "USD 3,000",
           delivery: "8 weeks delivery",
-          for: "A comprehensive 10-page website with lead tracking and bilingual support.",
+          for: "A comprehensive 10-page website with lead tracking and performance reporting.",
           includes: [
             "10 unique page designs",
             "Lead tracking & CRM integration",
-            "Bilingual (English & Arabic)",
             "Mobile-first responsive build",
             "CMS setup and documentation",
             "SEO optimized for West Cairo & Sheikh Zayed",
@@ -457,7 +456,7 @@ export const content = {
         {
           title: "Website Design",
           icon: "Monitor",
-          summary: "A 10-page bilingual website built for lead generation.",
+          summary: "A 10-page website built for lead generation and performance reporting.",
           details: {
             pages: [
               "Home / Landing",
@@ -473,7 +472,6 @@ export const content = {
             ],
             features: [
               "Lead tracking & CRM integration",
-              "Bilingual (English & Arabic)",
               "Mobile-first responsive design",
               "CMS for content management",
               "SEO optimized for West Cairo & Sheikh Zayed",
@@ -551,7 +549,7 @@ export const content = {
           items: [
             "CRM lead capture forms",
             "Real-time tracking & analytics",
-            "Bilingual CMS (English & Arabic)",
+            "CMS for content management",
             "West Cairo & Sheikh Zayed SEO",
             "Scalable backend architecture",
             "Secure hosting environment",

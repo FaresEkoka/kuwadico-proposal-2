@@ -53,7 +53,7 @@ export default function SocialMediaFrame() {
                 {pkg.name}
               </h3>
               <div className="mb-4">
-                <span className="text-3xl md:text-4xl font-bold text-accent-muted">
+                <span className="text-3xl md:text-4xl font-bold text-red-500">
                   {pkg.price}
                 </span>
                 <span className="text-white/50 text-sm">{pkg.period}</span>
