@@ -171,9 +171,6 @@ export default function GovernanceFrame() {
           </div>
         </motion.div>
 
-        <KeyHighlight delay={1.0}>
-          Clear ownership = fast decisions = on-time delivery.
-        </KeyHighlight>
       </div>
     </Frame>
   );

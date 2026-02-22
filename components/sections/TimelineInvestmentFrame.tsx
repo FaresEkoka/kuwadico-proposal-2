@@ -117,12 +117,12 @@ export default function TimelineInvestmentFrame() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6, delay: 0.5 }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8"
+          className="flex justify-center gap-4 mb-8"
         >
           {pricing.map((item: any, index: number) => (
             <div
               key={index}
-              className="bg-white/5 rounded-lg p-5 border border-white/10 flex items-center justify-between"
+              className="bg-white/5 rounded-lg p-5 border border-white/10 flex items-center justify-between w-full md:w-1/2"
             >
               <div>
                 <div className="text-sm text-white/60 uppercase tracking-wide font-medium mb-1">

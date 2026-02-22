@@ -38,11 +38,7 @@ export default function SocialMediaFrame() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
-              className={`bg-white/5 rounded-lg p-6 border flex flex-col ${
-                pkg.recommended
-                  ? "border-accent-muted/40 shadow-[0_10px_40px_rgba(57,255,20,0.15)]"
-                  : "border-white/10 hover:border-accent-muted/20"
-              } transition-all`}
+              className="bg-white/5 rounded-lg p-6 border border-white/10 flex flex-col hover:border-accent-muted/40 hover:shadow-[0_10px_40px_rgba(57,255,20,0.15)] transition-all"
             >
               {pkg.recommended && (
                 <div className="text-[10px] uppercase tracking-widest text-accent-muted font-medium mb-3">

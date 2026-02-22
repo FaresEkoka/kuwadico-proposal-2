@@ -668,11 +668,6 @@ export const content = {
           price: "USD 3,000",
           detail: "8 weeks delivery",
         },
-        {
-          name: "Social Media",
-          price: "From $500/mo",
-          detail: "3 flexible packages",
-        },
       ],
       footer: "Phased payments aligned to milestones. No hidden costs. All prices are estimates pending discovery.",
     },
