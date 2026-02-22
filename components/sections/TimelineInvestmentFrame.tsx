@@ -75,35 +75,27 @@ export default function TimelineInvestmentFrame() {
                   </div>
 
                   {/* Desktop: Gantt bar */}
-                  <div className="hidden md:grid grid-cols-8 gap-1 items-center">
-                    {Array.from({ length: totalWeeks }, (_, i) => {
-                      const weekNum = i + 1;
-                      const isActive = weekNum >= startCol && weekNum < startCol + spanCols;
-                      const isFirst = weekNum === startCol;
-
-                      return (
-                        <div key={i} className="h-10 relative">
-                          {isActive && (
-                            <motion.div
-                              initial={{ scaleX: 0 }}
-                              whileInView={{ scaleX: 1 }}
-                              viewport={{ once: true }}
-                              transition={{ duration: 0.4, delay: 0.4 + index * 0.15 }}
-                              className="absolute inset-0 bg-accent-muted/20 border border-accent-muted/30 origin-left flex items-center"
-                              style={{
-                                borderRadius: isFirst ? "6px 0 0 6px" : weekNum === startCol + spanCols - 1 ? "0 6px 6px 0" : "0",
-                              }}
-                            >
-                              {isFirst && (
-                                <span className="text-xs text-white/90 font-medium pl-3 whitespace-nowrap">
-                                  {phase.phase}
-                                </span>
-                              )}
-                            </motion.div>
-                          )}
-                        </div>
-                      );
-                    })}
+                  <div className="hidden md:block relative h-10">
+                    <div className="hidden md:grid grid-cols-8 gap-1 h-10">
+                      {Array.from({ length: totalWeeks }, (_, i) => (
+                        <div key={i} className="h-10" />
+                      ))}
+                    </div>
+                    <motion.div
+                      initial={{ scaleX: 0 }}
+                      whileInView={{ scaleX: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.4, delay: 0.4 + index * 0.15 }}
+                      className="absolute top-0 h-10 bg-accent-muted/20 border border-accent-muted/30 rounded-md origin-left flex items-center"
+                      style={{
+                        left: `${((startCol - 1) / totalWeeks) * 100}%`,
+                        width: `${(spanCols / totalWeeks) * 100}%`,
+                      }}
+                    >
+                      <span className="text-xs text-white/90 font-medium pl-3 whitespace-nowrap">
+                        {phase.phase}
+                      </span>
+                    </motion.div>
                   </div>
                 </motion.div>
               );
