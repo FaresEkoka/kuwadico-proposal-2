@@ -8,7 +8,6 @@ import LazyBackground from "../LazyBackground";
 export default function TimelineInvestmentFrame() {
   const frame = getFrame("timeline-investment")!;
   const gantt = (frame as any).gantt || [];
-  const pricing = (frame as any).pricing || [];
 
   const totalWeeks = 8;
 
@@ -86,13 +85,13 @@ export default function TimelineInvestmentFrame() {
                       whileInView={{ scaleX: 1 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.4, delay: 0.4 + index * 0.15 }}
-                      className="absolute top-0 h-10 bg-accent-muted/20 border border-accent-muted/30 rounded-md origin-left flex items-center"
+                      className="absolute top-0 h-10 bg-accent-muted/20 border border-accent-muted/30 rounded-md origin-left flex items-center justify-center"
                       style={{
                         left: `${((startCol - 1) / totalWeeks) * 100}%`,
                         width: `${(spanCols / totalWeeks) * 100}%`,
                       }}
                     >
-                      <span className="text-xs text-white/90 font-medium pl-3 whitespace-nowrap">
+                      <span className="text-xs text-white/90 font-medium whitespace-nowrap">
                         {phase.phase}
                       </span>
                     </motion.div>
@@ -103,43 +102,6 @@ export default function TimelineInvestmentFrame() {
           </div>
         </motion.div>
 
-        {/* Pricing Summary */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          className="flex justify-center gap-4 mb-8"
-        >
-          {pricing.map((item: any, index: number) => (
-            <div
-              key={index}
-              className="bg-white/5 rounded-lg p-5 border border-white/10 flex items-center justify-between w-full md:w-1/2"
-            >
-              <div>
-                <div className="text-sm text-white/60 uppercase tracking-wide font-medium mb-1">
-                  {item.name}
-                </div>
-                <div className="text-xs text-white/40">{item.detail}</div>
-              </div>
-              <div className="text-2xl md:text-3xl font-bold text-red-500">
-                {item.price}
-              </div>
-            </div>
-          ))}
-        </motion.div>
-
-        {(frame as any).footer && (
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6, delay: 0.6 }}
-            className="text-sm text-white/50 italic text-center"
-          >
-            {(frame as any).footer}
-          </motion.p>
-        )}
       </div>
     </Frame>
   );

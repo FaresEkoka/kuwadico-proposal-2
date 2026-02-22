@@ -75,20 +75,7 @@ export default function ExecutiveSummaryFrame() {
             </p>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            className="space-y-3"
-          >
-            <div className="text-xs uppercase tracking-widest text-accent-muted font-medium">
-              The Investment
-            </div>
-            <p className="text-base text-white/90 leading-relaxed">
-              <span className="text-red-500">USD 3,000</span> for a 10-page website with CRM integration and lead tracking, plus social media packages from <span className="text-red-500">$500/mo</span>. Transparent pricing with no hidden costs.
-            </p>
-          </motion.div>
+
         </div>
 
         {/* Trust Signal */}

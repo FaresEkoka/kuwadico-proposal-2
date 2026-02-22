@@ -46,7 +46,7 @@ export default function PricingFrame() {
             Transparent Pricing.
           </h2>
           <p className="text-sm md:text-base text-white/70 font-sans">
-            Website package. Clear scope. Social media add-ons available.
+            One package. Clear scope. No hidden costs.
           </p>
         </motion.div>
 
@@ -63,7 +63,7 @@ export default function PricingFrame() {
             {/* Title & Price */}
             <div className="mb-6">
               <div className="text-xs uppercase tracking-widest text-white/50 font-sans font-medium mb-4">
-                Website Package
+                Complete Package
               </div>
               <div className="font-sans font-bold text-4xl md:text-5xl text-red-500">
                 USD 3,000

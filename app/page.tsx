@@ -16,7 +16,6 @@ import ObjectiveFrame from "@/components/sections/ObjectiveFrame";
 import UserJourneysFrame from "@/components/sections/UserJourneysFrame";
 import InformationArchitectureFrame from "@/components/sections/InformationArchitectureFrame";
 import PerspectiveFrame from "@/components/sections/PerspectiveFrame";
-import BrandRealityFrame from "@/components/sections/BrandRealityFrame";
 import DesignPhilosophyFrame from "@/components/sections/DesignPhilosophyFrame";
 import WhatsIncludedFrame from "@/components/sections/WhatsIncludedFrame";
 import WebsiteFrame from "@/components/sections/WebsiteFrame";
@@ -24,7 +23,6 @@ import SocialMediaFrame from "@/components/sections/SocialMediaFrame";
 import ProjectManagementFrame from "@/components/sections/ProjectManagementFrame";
 import TimelineInvestmentFrame from "@/components/sections/TimelineInvestmentFrame";
 import GovernanceFrame from "@/components/sections/GovernanceFrame";
-import RiskTransparencyFrame from "@/components/sections/RiskTransparencyFrame";
 import ScrollIndicator from "@/components/ScrollIndicator";
 import ProgressCounter from "@/components/ProgressCounter";
 import NavigationHeader from "@/components/NavigationHeader";
@@ -118,7 +116,6 @@ export default function Home() {
         <UserJourneysFrame />
         <InformationArchitectureFrame />
         <PerspectiveFrame />
-        <BrandRealityFrame />
         <DesignPhilosophyFrame />
         <WhatsIncludedFrame />
         <WebsiteFrame />
@@ -126,7 +123,6 @@ export default function Home() {
         <ProjectManagementFrame />
         <TimelineInvestmentFrame />
         <GovernanceFrame />
-        <RiskTransparencyFrame />
       </main>
     </>
   );

@@ -354,7 +354,7 @@ export const content = {
         {
           name: "Website Package",
           subtitle: "Full website design and build",
-          price: "USD 3,000",
+          price: "",
           delivery: "8 weeks delivery",
           for: "A comprehensive 10-page website with lead tracking and performance reporting.",
           includes: [
@@ -662,14 +662,7 @@ export const content = {
         { phase: "Development & Testing", weeks: "5-7", span: 3 },
         { phase: "Launch & Handover", weeks: "8", span: 1 },
       ],
-      pricing: [
-        {
-          name: "Website Package",
-          price: "USD 3,000",
-          detail: "8 weeks delivery",
-        },
-      ],
-      footer: "Phased payments aligned to milestones. No hidden costs. All prices are estimates pending discovery.",
+      pricing: [],
     },
   ],
 };

@@ -11,7 +11,6 @@ export const FRAME_IDS = [
   "user-journeys",
   "information-architecture",
   "perspective",
-  "brand-reality",
   "design-philosophy",
   "whats-included",
   "website",
@@ -19,7 +18,6 @@ export const FRAME_IDS = [
   "project-management",
   "timeline-investment",
   "governance",
-  "risk-transparency",
 ] as const;
 
 export const SECTION_NAMES = [
@@ -35,7 +33,6 @@ export const SECTION_NAMES = [
   "User Journeys",
   "Information Architecture",
   "Perspective",
-  "Brand Reality",
   "Design Philosophy",
   "What's Included",
   "Website",
@@ -43,5 +40,4 @@ export const SECTION_NAMES = [
   "Project Management",
   "Timeline & Investment",
   "Governance",
-  "Risk Transparency",
 ] as const;

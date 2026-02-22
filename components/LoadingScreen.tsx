@@ -3,43 +3,14 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const ASSETS_IN_ORDER = [
-  "/backgrounds/1.png",
-  "/backgrounds/2.png",
-  "/backgrounds/3.png",
-  "/backgrounds/4.png",
-  "/backgrounds/5.png",
-  "/backgrounds/6.png",
-  "/backgrounds/7.png",
-  "/backgrounds/8.png",
-  "/backgrounds/9.png",
-  "/backgrounds/10.png",
-  "/backgrounds/11.png",
-  "/hero-fallback.jpg",
-  "/hero-video.mp4", // Video LAST
-];
+const TOTAL_DURATION = 120; // 2 minutes in seconds
 
-// Minimum time to show loading screen (3 seconds for polish)
-const MIN_LOADING_DURATION = 3000;
-
-interface LoadingScreenProps {
-  onLoadComplete: (assets: Record<string, string>) => void;
-}
-
-// Format time remaining into human-readable string
 function formatTime(seconds: number): string {
-  if (seconds > 60) {
-    const mins = Math.floor(seconds / 60);
-    const secs = seconds % 60;
-    return `About ${mins}:${secs.toString().padStart(2, "0")} remaining`;
-  }
-  if (seconds > 10) {
-    return `About ${seconds} seconds remaining`;
-  }
-  return "Almost there";
+  const mins = Math.floor(seconds / 60);
+  const secs = seconds % 60;
+  return `${mins}:${secs.toString().padStart(2, "0")}`;
 }
 
-// Get loading message based on progress
 function getLoadingMessage(percent: number): string {
   if (percent < 15) return "Brewing something special for you...";
   if (percent < 30) return "Loading high-resolution visuals...";
@@ -51,82 +22,46 @@ function getLoadingMessage(percent: number): string {
   return "Ready!";
 }
 
+interface LoadingScreenProps {
+  onLoadComplete: (assets: Record<string, string>) => void;
+}
+
 export default function LoadingScreen({ onLoadComplete }: LoadingScreenProps) {
   const [progress, setProgress] = useState(0);
-  const [timeRemaining, setTimeRemaining] = useState(120);
+  const [timeRemaining, setTimeRemaining] = useState(TOTAL_DURATION);
   const [loadingMessage, setLoadingMessage] = useState("Brewing something special for you...");
-
   const hasStartedRef = useRef(false);
-  const assetsRef = useRef<Record<string, string>>({});
   const onLoadCompleteRef = useRef(onLoadComplete);
-
-  // Keep callback ref updated
   onLoadCompleteRef.current = onLoadComplete;
 
   useEffect(() => {
-    // Prevent double-execution in React strict mode
-    if (hasStartedRef.current) return;
-    hasStartedRef.current = true;
+    // Store start time persistently so Strict Mode remounts don't reset it
+    if (!hasStartedRef.current) {
+      hasStartedRef.current = true;
+      (hasStartedRef as any).startTime = Date.now();
+    }
+    const startTime = (hasStartedRef as any).startTime as number;
 
-    const startTime = Date.now();
-    const totalAssets = ASSETS_IN_ORDER.length;
-    let loadedCount = 0;
-    let assetsFinished = false;
+    const interval = setInterval(() => {
+      const elapsed = (Date.now() - startTime) / 1000;
+      const remaining = Math.max(0, Math.ceil(TOTAL_DURATION - elapsed));
+      const percent = Math.min(100, Math.round((elapsed / TOTAL_DURATION) * 100));
 
-    // ========== PROGRESS UI ==========
-    const progressInterval = setInterval(() => {
-      const realPercent = Math.round((loadedCount / totalAssets) * 100);
-      setProgress(realPercent);
-      setLoadingMessage(getLoadingMessage(realPercent));
-
-      const elapsed = Date.now() - startTime;
-      const remaining = Math.max(0, Math.ceil((MIN_LOADING_DURATION - elapsed) / 1000));
       setTimeRemaining(remaining);
-    }, 100);
+      setProgress(percent);
+      setLoadingMessage(getLoadingMessage(percent));
 
-    const finish = () => {
-      clearInterval(progressInterval);
-      setProgress(100);
-      setLoadingMessage("Ready!");
-
-      setTimeout(() => {
-        onLoadCompleteRef.current(assetsRef.current);
-      }, 500);
-    };
-
-    const tryFinish = () => {
-      if (!assetsFinished) return;
-      const elapsed = Date.now() - startTime;
-      const remaining = MIN_LOADING_DURATION - elapsed;
       if (remaining <= 0) {
-        finish();
-      } else {
-        setTimeout(finish, remaining);
+        clearInterval(interval);
+        setProgress(100);
+        setLoadingMessage("Ready!");
+        setTimeout(() => {
+          onLoadCompleteRef.current({});
+        }, 500);
       }
-    };
+    }, 250);
 
-    // ========== REAL ASSET LOADING ==========
-    const loadAssetsSequentially = async () => {
-      for (const url of ASSETS_IN_ORDER) {
-        try {
-          const response = await fetch(url);
-          const blob = await response.blob();
-          const blobUrl = URL.createObjectURL(blob);
-          assetsRef.current[url] = blobUrl;
-        } catch (error) {
-          console.error(`Failed to load: ${url}`, error);
-        }
-        loadedCount++;
-      }
-      assetsFinished = true;
-      tryFinish();
-    };
-
-    loadAssetsSequentially();
-
-    return () => {
-      clearInterval(progressInterval);
-    };
+    return () => clearInterval(interval);
   }, []);
 
   return (
@@ -136,11 +71,9 @@ export default function LoadingScreen({ onLoadComplete }: LoadingScreenProps) {
       transition={{ duration: 0.5 }}
       className="fixed inset-0 z-[100] bg-[#0A0A0A] flex flex-col items-center justify-center"
     >
-      {/* Subtle radial gradient background */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(255,255,255,0.02)_0%,_transparent_70%)]" />
 
       <div className="relative z-10 flex flex-col items-center px-6 text-center w-full max-w-sm">
-        {/* Flex Labs - small, subtle brand mark */}
         <motion.div
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
@@ -152,7 +85,6 @@ export default function LoadingScreen({ onLoadComplete }: LoadingScreenProps) {
           </span>
         </motion.div>
 
-        {/* Main title - elegant, not chunky */}
         <motion.h1
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
@@ -162,7 +94,6 @@ export default function LoadingScreen({ onLoadComplete }: LoadingScreenProps) {
           Website & Social Media Proposal
         </motion.h1>
 
-        {/* Please wait message */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -177,7 +108,6 @@ export default function LoadingScreen({ onLoadComplete }: LoadingScreenProps) {
           </p>
         </motion.div>
 
-        {/* Progress bar - thin and refined */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -193,12 +123,14 @@ export default function LoadingScreen({ onLoadComplete }: LoadingScreenProps) {
               transition={{ duration: 0.3, ease: "easeOut" }}
             />
           </div>
-          <div className="mt-3 flex justify-end">
+          <div className="mt-3 flex justify-between">
+            <span className="text-xs text-white/40 font-light tabular-nums">
+              {formatTime(timeRemaining)}
+            </span>
             <span className="text-xs text-white/40 font-light tabular-nums">{progress}%</span>
           </div>
         </motion.div>
 
-        {/* Loading message - italic, subtle */}
         <div className="h-6 mb-2">
           <AnimatePresence mode="wait">
             <motion.p
@@ -214,21 +146,6 @@ export default function LoadingScreen({ onLoadComplete }: LoadingScreenProps) {
           </AnimatePresence>
         </div>
 
-        {/* Time remaining - very subtle */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="h-5"
-        >
-          {progress < 100 && (
-            <p className="text-xs font-light text-white/30">
-              {formatTime(timeRemaining)}
-            </p>
-          )}
-        </motion.div>
-
-        {/* Subtle pulse indicator - replacing dots */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -250,7 +167,6 @@ export default function LoadingScreen({ onLoadComplete }: LoadingScreenProps) {
         </motion.div>
       </div>
 
-      {/* Footer - very subtle */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
