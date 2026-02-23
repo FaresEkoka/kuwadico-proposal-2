@@ -19,12 +19,15 @@ const SECTION_TAGS: Record<string, string[]> = {
   "information-architecture": ["Strategy", "Structure"],
   "perspective": ["Strategy", "Approach"],
   "design-philosophy": ["Design", "Approach"],
+  "style-directions": ["Design", "Preview"],
   "whats-included": ["Overview", "Scope"],
   "website": ["Scope", "Website", "Commercial"],
   "social-media": ["Scope", "Social Media", "Commercial"],
   "project-management": ["Process", "Management"],
+  "pricing": ["Commercial", "Pricing"],
   "timeline-investment": ["Commercial", "Timeline"],
   "governance": ["Process", "Management"],
+  "cta": ["Overview", "Contact"],
 };
 
 const ALL_TAGS = Array.from(new Set(Object.values(SECTION_TAGS).flat()));

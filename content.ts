@@ -381,11 +381,11 @@ export const content = {
       ],
       socialMedia: {
         headline: "Social Media",
-        note: "From $500/mo — 3 flexible packages",
+        note: "From $1,000/mo — 3 flexible packages",
         tiers: [
           {
             name: "Strategy + Templates",
-            price: "$500/mo",
+            price: "$1,000/mo",
             features: [
               "Strategy document",
               "Content direction",
@@ -397,7 +397,7 @@ export const content = {
           },
           {
             name: "Full Management",
-            price: "$1,500/mo",
+            price: "$2,000/mo",
             recommended: true,
             features: [
               "Everything in Strategy + Templates",
@@ -410,7 +410,7 @@ export const content = {
           },
           {
             name: "Monthly Calendar Posts",
-            price: "$800/mo",
+            price: "$2,500/mo",
             features: [
               "Monthly content calendar",
               "20 branded designs",
@@ -494,9 +494,9 @@ export const content = {
           summary: "Three flexible packages to match your engagement level.",
           details: {
             tiers: [
-              { name: "Strategy + Templates", price: "$500/mo" },
-              { name: "Full Management", price: "$1,500/mo" },
-              { name: "Monthly Calendar", price: "$800/mo" },
+              { name: "Strategy + Templates", price: "$1,000/mo" },
+              { name: "Full Management", price: "$2,000/mo" },
+              { name: "Monthly Calendar", price: "$2,500/mo" },
             ],
           },
         },
@@ -577,7 +577,7 @@ export const content = {
       packages: [
         {
           name: "Strategy + Templates",
-          price: "$500",
+          price: "$1,000",
           period: "/mo",
           features: [
             "Strategy document",
@@ -590,7 +590,7 @@ export const content = {
         },
         {
           name: "Full Management",
-          price: "$1,500",
+          price: "$2,000",
           period: "/mo",
           recommended: true,
           features: [
@@ -604,7 +604,7 @@ export const content = {
         },
         {
           name: "Monthly Calendar Posts",
-          price: "$800",
+          price: "$2,500",
           period: "/mo",
           features: [
             "Monthly content calendar",

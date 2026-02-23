@@ -17,12 +17,15 @@ import UserJourneysFrame from "@/components/sections/UserJourneysFrame";
 import InformationArchitectureFrame from "@/components/sections/InformationArchitectureFrame";
 import PerspectiveFrame from "@/components/sections/PerspectiveFrame";
 import DesignPhilosophyFrame from "@/components/sections/DesignPhilosophyFrame";
+import StyleDirectionsFrame from "@/components/sections/StyleDirectionsFrame";
 import WhatsIncludedFrame from "@/components/sections/WhatsIncludedFrame";
 import WebsiteFrame from "@/components/sections/WebsiteFrame";
 import SocialMediaFrame from "@/components/sections/SocialMediaFrame";
 import ProjectManagementFrame from "@/components/sections/ProjectManagementFrame";
+import PricingFrame from "@/components/sections/PricingFrame";
 import TimelineInvestmentFrame from "@/components/sections/TimelineInvestmentFrame";
 import GovernanceFrame from "@/components/sections/GovernanceFrame";
+import CTAFrame from "@/components/sections/CTAFrame";
 import ScrollIndicator from "@/components/ScrollIndicator";
 import ProgressCounter from "@/components/ProgressCounter";
 import NavigationHeader from "@/components/NavigationHeader";
@@ -117,12 +120,15 @@ export default function Home() {
         <InformationArchitectureFrame />
         <PerspectiveFrame />
         <DesignPhilosophyFrame />
+        <StyleDirectionsFrame />
         <WhatsIncludedFrame />
         <WebsiteFrame />
         <SocialMediaFrame />
         <ProjectManagementFrame />
+        <PricingFrame />
         <TimelineInvestmentFrame />
         <GovernanceFrame />
+        <CTAFrame />
       </main>
     </>
   );

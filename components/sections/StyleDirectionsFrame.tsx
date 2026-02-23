@@ -41,7 +41,7 @@ export default function StyleDirectionsFrame() {
             We built two directions to show you — not just tell you.
           </h2>
           <p className="text-sm md:text-base text-white/70 font-sans max-w-2xl leading-relaxed">
-            These samples do not represent a final design in any way. They were created quickly and exclusively for this proposal to help you feel how different directions could come to life for Advansys.
+            These samples do not represent a final design in any way. They were created quickly and exclusively for this proposal to help you feel how different directions could come to life for Kuwadico.
           </p>
         </motion.div>
 

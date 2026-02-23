@@ -19,7 +19,7 @@ const PAGE_BREAKDOWN = [
   { page: "Grand Heights Overview", detail: "master plan showcase" },
   { page: "Glory Phase II", detail: "phase-specific" },
   { page: "Master District Overview", detail: "unique design" },
-  { page: "Smart Community", detail: "resident app" },
+  { page: "Smart Community", detail: "unique design" },
   { page: "Commercial Offering", detail: "unique design" },
   { page: "Investor Relations", detail: "unique design" },
   { page: "Contact / Inquiry", detail: "CRM gateway" },
@@ -65,8 +65,8 @@ export default function PricingFrame() {
               <div className="text-xs uppercase tracking-widest text-white/50 font-sans font-medium mb-4">
                 Complete Package
               </div>
-              <div className="font-sans font-bold text-4xl md:text-5xl text-red-500">
-                USD 3,000
+              <div className="font-sans font-bold text-4xl md:text-5xl text-accent-muted">
+                $8,000
               </div>
             </div>
 
@@ -126,7 +126,6 @@ export default function PricingFrame() {
                   <span className="text-accent-muted mt-0.5">•</span>
                   <span>
                     <span className="text-white/90">{item.page}</span>
-                    <span className="text-white/50 ml-1">({item.detail})</span>
                   </span>
                 </motion.li>
               ))}
