@@ -51,14 +51,14 @@ export default function CurrentVsTargetFrame() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
-          className="mb-6"
+          className="mb-4"
         >
           {frame.kicker && (
-            <div className="text-sm uppercase tracking-widest text-accent-muted mb-3 font-sans font-medium">
+            <div className="text-sm uppercase tracking-widest text-accent-muted mb-2 font-sans font-medium">
               {frame.kicker.toUpperCase()}
             </div>
           )}
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-black mb-4 leading-[0.9] tracking-tighter uppercase presentation-headline">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-black mb-3 leading-[0.9] tracking-tighter uppercase presentation-headline">
             {frame.headline}
           </h2>
         </motion.div>
@@ -69,7 +69,7 @@ export default function CurrentVsTargetFrame() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="grid grid-cols-[1fr_auto_1fr] gap-4 mb-6"
+          className="grid grid-cols-[1fr_auto_1fr] gap-4 mb-3"
         >
           <div className="text-sm uppercase tracking-wide font-sans font-medium text-white/70">
             Current State
@@ -86,7 +86,7 @@ export default function CurrentVsTargetFrame() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="mb-6"
+          className="mb-4"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
@@ -102,7 +102,7 @@ export default function CurrentVsTargetFrame() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: 0.4 + index * 0.1 }}
-                  className="grid grid-cols-[1fr_auto_1fr] gap-4 py-5 border-b border-white/10 last:border-b-0"
+                  className="grid grid-cols-[1fr_auto_1fr] gap-4 py-3 border-b border-white/10 last:border-b-0"
                 >
                   {/* Current State (Left) */}
                   <div className="flex flex-col">

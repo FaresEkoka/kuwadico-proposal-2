@@ -17,13 +17,13 @@ export default function WhatsIncludedFrame() {
   return (
     <Frame id="whats-included" className="bg-dark">
       <LazyBackground src="/backgrounds/3.png" />
-      <div className="h-full flex flex-col justify-center py-16 px-6 md:py-24 md:px-10 lg:py-36 lg:px-16 max-w-6xl mx-auto relative z-10">
+      <div className="h-full flex flex-col justify-center p-6 md:p-8 lg:p-10 max-w-6xl mx-auto relative z-10">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
-          className="mb-8"
+          className="mb-4"
         >
           {frame.kicker && (
             <div className="text-xs uppercase tracking-widest text-accent-muted mb-2 font-medium">

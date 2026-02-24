@@ -38,10 +38,10 @@ export default function ChallengeFrame() {
               <ReadTimeIndicator minutes={2} />
             </div>
           )}
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-black mb-4 leading-[0.9] tracking-tighter uppercase presentation-headline">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-black mb-3 leading-[0.9] tracking-tighter uppercase presentation-headline">
             {frame.headline}
           </h2>
-          <p className="text-sm md:text-base text-white/90 leading-relaxed mb-4 font-normal tracking-wide">
+          <p className="text-sm md:text-base text-white/90 leading-relaxed mb-3 font-normal tracking-wide">
             {frame.intro}
           </p>
         </motion.div>
@@ -51,7 +51,7 @@ export default function ChallengeFrame() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="space-y-2 mb-4"
+          className="space-y-2 mb-3"
         >
           {frame.problems?.map((problem, index) => (
             <motion.div

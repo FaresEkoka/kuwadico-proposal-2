@@ -29,23 +29,23 @@ export default function ContextFrame() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
-          className="mb-8"
+          className="mb-4"
         >
           {frame.kicker && (
-            <div className="flex items-center gap-3 mb-3">
+            <div className="flex items-center gap-3 mb-2">
               <div className="text-xs uppercase tracking-widest text-accent-muted font-medium">
                 {frame.kicker.toUpperCase()}
               </div>
               <ReadTimeIndicator minutes={2} />
             </div>
           )}
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-black mb-4 leading-[0.9] tracking-tighter uppercase presentation-headline">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-black mb-3 leading-[0.9] tracking-tighter uppercase presentation-headline">
             {frame.headline}
           </h2>
         </motion.div>
 
         {/* Main content grid: Stacked paragraphs left, audiences right */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
           {/* Left: Stacked paragraphs */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}

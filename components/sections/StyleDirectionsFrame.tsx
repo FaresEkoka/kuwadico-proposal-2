@@ -32,12 +32,12 @@ export default function StyleDirectionsFrame() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
-          className="mb-8"
+          className="mb-4"
         >
           <div className="text-xs uppercase tracking-widest text-accent-muted mb-2 font-sans font-medium">
             See it in action
           </div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-black leading-[0.9] tracking-tighter uppercase presentation-headline mb-4">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-black leading-[0.9] tracking-tighter uppercase presentation-headline mb-3">
             We built two directions to show you — not just tell you.
           </h2>
           <p className="text-sm md:text-base text-white/70 font-sans max-w-2xl leading-relaxed">
@@ -51,7 +51,7 @@ export default function StyleDirectionsFrame() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-8"
+          className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4"
         >
           {DIRECTIONS.map((direction, index) => (
             <motion.div
@@ -60,10 +60,10 @@ export default function StyleDirectionsFrame() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.3 + index * 0.15 }}
-              className="bg-white/5 rounded-lg p-6 md:p-8 border border-white/10 flex flex-col h-full"
+              className="bg-white/5 rounded-lg p-5 md:p-6 border border-white/10 flex flex-col h-full"
             >
               {/* Card content - flex-1 to push button to bottom */}
-              <div className="flex-1 mb-6">
+              <div className="flex-1 mb-4">
                 <div className="text-xs uppercase tracking-widest text-white/50 font-sans font-medium mb-3">
                   {direction.title}
                 </div>

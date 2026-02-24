@@ -61,40 +61,6 @@ export default function CTAFrame() {
           </h2>
         </motion.div>
 
-        {/* Intro */}
-        <motion.p
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-base md:text-lg text-white/70 leading-relaxed max-w-2xl mb-10"
-        >
-          {(frame as any).intro}
-        </motion.p>
-
-        {/* Next Steps */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="mb-10 w-full max-w-md"
-        >
-          <div className="text-xs uppercase tracking-widest text-accent-muted mb-4 font-medium">
-            Next Steps
-          </div>
-          <div className="space-y-3 text-left">
-            {((frame as any).nextSteps || []).map((step: string, i: number) => (
-              <div key={i} className="flex items-start gap-3">
-                <span className="text-accent-muted font-mono text-sm mt-0.5">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <span className="text-sm text-white/80 leading-relaxed">{step}</span>
-              </div>
-            ))}
-          </div>
-        </motion.div>
-
         {/* Buttons */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -122,26 +88,6 @@ export default function CTAFrame() {
             {copied ? "Copied!" : "Share Proposal"}
           </button>
         </motion.div>
-
-        {/* Closing */}
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          className="text-sm text-white/50 italic mb-12 max-w-lg"
-        >
-          {(frame as any).closing}
-        </motion.p>
-
-        {/* Divider */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6, delay: 0.55 }}
-          className="w-full max-w-md h-px bg-white/10 mb-10"
-        />
 
         {/* Quick Links */}
         <motion.div
