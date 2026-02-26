@@ -12,11 +12,11 @@ export const FRAME_IDS = [
   "perspective",
   "design-philosophy",
   "whats-included",
-  "social-media",
   "project-management",
-  "pricing",
   "timeline-investment",
   "governance",
+  "social-media",
+  "pricing",
   "cta",
 ] as const;
 
@@ -34,10 +34,10 @@ export const SECTION_NAMES = [
   "Perspective",
   "Design Philosophy",
   "What's Included",
-  "Social Media",
   "Project Management",
-  "Pricing",
   "Timeline & Investment",
   "Governance",
+  "Social Media",
+  "Pricing",
   "Call to Action",
 ] as const;

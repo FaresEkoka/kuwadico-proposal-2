@@ -39,7 +39,7 @@ export default function PricingFrame() {
           className="text-center mb-8"
         >
           <div className="text-xs uppercase tracking-widest text-accent-muted mb-2 font-sans font-medium">
-            Investment
+            Website Investment
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-black leading-[0.9] tracking-tighter uppercase presentation-headline mb-4">
             Transparent Pricing.

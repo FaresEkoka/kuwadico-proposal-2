@@ -19,11 +19,11 @@ const SECTION_TAGS: Record<string, string[]> = {
   "perspective": ["Strategy", "Approach"],
   "design-philosophy": ["Design", "Approach"],
   "whats-included": ["Overview", "Scope"],
-  "social-media": ["Scope", "Social Media", "Commercial"],
   "project-management": ["Process", "Management"],
-  "pricing": ["Commercial", "Pricing"],
   "timeline-investment": ["Commercial", "Timeline"],
   "governance": ["Process", "Management"],
+  "social-media": ["Scope", "Social Media", "Commercial"],
+  "pricing": ["Commercial", "Pricing"],
   "cta": ["Overview", "Contact"],
 };
 

@@ -562,7 +562,7 @@ export const content = {
     },
     {
       id: "social-media",
-      kicker: "Social Media",
+      kicker: "Social Media Investment",
       headline: "Your ongoing digital voice.",
       packages: [
         {

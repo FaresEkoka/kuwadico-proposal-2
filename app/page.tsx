@@ -120,11 +120,11 @@ export default function Home() {
         <PerspectiveFrame />
         <DesignPhilosophyFrame />
         <WhatsIncludedFrame />
-        <SocialMediaFrame />
         <ProjectManagementFrame />
-        <PricingFrame />
         <TimelineInvestmentFrame />
         <GovernanceFrame />
+        <SocialMediaFrame />
+        <PricingFrame />
         <CTAFrame />
       </main>
     </>
