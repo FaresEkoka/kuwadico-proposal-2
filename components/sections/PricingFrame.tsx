@@ -19,9 +19,8 @@ const PAGE_BREAKDOWN = [
   { page: "Grand Heights Overview", detail: "master plan showcase" },
   { page: "Glory Phase II", detail: "phase-specific" },
   { page: "Master District Overview", detail: "unique design" },
-  { page: "Smart Community", detail: "unique design" },
   { page: "Commercial Offering", detail: "unique design" },
-  { page: "Investor Relations", detail: "unique design" },
+  { page: "Partnership", detail: "unique design" },
   { page: "Contact / Inquiry", detail: "CRM gateway" },
   { page: "Blog / News", detail: "unique design" },
 ];

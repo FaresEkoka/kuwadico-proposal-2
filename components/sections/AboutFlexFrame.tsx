@@ -37,7 +37,7 @@ export default function AboutFlexFrame() {
           height: "100%"
         }}
       />
-      <div className="h-full flex flex-col justify-start px-6 md:px-8 lg:px-10 max-w-6xl overflow-hidden mx-auto relative z-10">
+      <div className="h-full flex flex-col justify-center px-6 md:px-8 lg:px-10 max-w-6xl overflow-hidden mx-auto relative z-10">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}

@@ -37,8 +37,14 @@ export default function NavigationHeader() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-2 sm:py-3">
         <div className="flex items-center justify-between gap-3 sm:gap-6">
-          {/* Left: Section counter and name */}
+          {/* Left: Logo, section counter and name */}
           <div className="flex items-center gap-2 sm:gap-4 flex-1 min-w-0">
+            <img
+              src="/logos/flex-labs-logo.png"
+              alt="Flex Labs"
+              className="h-5 sm:h-6 w-auto object-contain flex-shrink-0"
+            />
+            <div className="h-3 sm:h-4 w-px bg-white/10" />
             <div className="flex-shrink-0">
               <div className="text-[9px] sm:text-[10px] uppercase tracking-[0.15em] sm:tracking-[0.2em] text-accent-muted/60 font-medium leading-none">
                 {String(currentSection + 1).padStart(2, "0")} / {FRAME_IDS.length}

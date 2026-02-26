@@ -117,10 +117,8 @@ export default function Home() {
         <ChallengeFrame />
         <ObjectiveFrame />
         <UserJourneysFrame />
-        <InformationArchitectureFrame />
         <PerspectiveFrame />
         <DesignPhilosophyFrame />
-        <StyleDirectionsFrame />
         <WhatsIncludedFrame />
         <WebsiteFrame />
         <SocialMediaFrame />
