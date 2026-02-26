@@ -61,26 +61,25 @@ export default function CTAFrame() {
           </h2>
         </motion.div>
 
-        {/* Buttons */}
+        {/* Subtitle */}
+        <motion.p
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="text-base md:text-lg text-white/70 leading-relaxed max-w-2xl mb-8"
+        >
+          This proposal outlines how Flex Labs can help Kuwadico close the gap between what you&apos;re building and how it&apos;s seen online. Let&apos;s talk when you&apos;re ready.
+        </motion.p>
+
+        {/* Share Button */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="flex flex-col sm:flex-row gap-4 mb-8"
+          className="mb-8"
         >
-          <a
-            href="/downloads/Kuwadico_Commercial_Proposal.pdf"
-            download
-            className="inline-flex items-center justify-center gap-2 px-8 py-3 bg-accent-muted text-dark font-semibold rounded-lg hover:bg-accent hover:scale-105 transition-all text-center"
-          >
-            Download Commercial Proposal
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-              <polyline points="7 10 12 15 17 10" />
-              <line x1="12" y1="15" x2="12" y2="3" />
-            </svg>
-          </a>
           <button
             onClick={handleShare}
             className="px-8 py-3 border border-white/20 text-white font-semibold rounded-lg hover:border-white/40 hover:bg-white/5 transition-colors min-w-[160px]"
