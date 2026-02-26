@@ -342,7 +342,6 @@ export const content = {
         "New development phase launches",
         "Sub-developer partnership showcases",
         "Campaign landing pages for Glory Phase II",
-        "Community app integration layer",
         "Property portal and broker integrations",
       ],
       conclusion: "Nothing built here blocks future growth.",
@@ -395,8 +394,20 @@ export const content = {
             ],
           },
           {
-            name: "Full Management",
+            name: "Monthly Calendar Posts",
             price: "$2,000/mo",
+            features: [
+              "Monthly content calendar",
+              "20 branded designs",
+              "Captions & hashtags",
+              "Stories/reels templates",
+              "Brand visual consistency",
+              "Scheduling-ready delivery",
+            ],
+          },
+          {
+            name: "Full Management",
+            price: "$2,500/mo",
             recommended: true,
             features: [
               "Everything in Strategy + Templates",
@@ -405,18 +416,6 @@ export const content = {
               "Analytics & reporting",
               "Growth strategy",
               "Bi-weekly strategy calls",
-            ],
-          },
-          {
-            name: "Monthly Calendar Posts",
-            price: "$2,500/mo",
-            features: [
-              "Monthly content calendar",
-              "20 branded designs",
-              "Captions & hashtags",
-              "Stories/reels templates",
-              "Brand visual consistency",
-              "Scheduling-ready delivery",
             ],
           },
         ],
@@ -474,8 +473,7 @@ export const content = {
               "CMS for content management",
               "SEO optimized for West Cairo & Sheikh Zayed",
               "Secure hosting & scalable backend",
-              "Community app integration layer",
-            ],
+                  ],
             approach: [
               "Premium master developer positioning",
               "Grand Heights as lifestyle destination",
@@ -491,8 +489,8 @@ export const content = {
           details: {
             tiers: [
               { name: "Strategy + Templates", price: "$1,000/mo" },
-              { name: "Full Management", price: "$2,000/mo" },
-              { name: "Monthly Calendar", price: "$2,500/mo" },
+              { name: "Monthly Calendar", price: "$2,000/mo" },
+              { name: "Full Management", price: "$2,500/mo" },
             ],
           },
         },
@@ -548,8 +546,7 @@ export const content = {
             "West Cairo & Sheikh Zayed SEO",
             "Scalable backend architecture",
             "Secure hosting environment",
-            "Community app integration layer",
-          ],
+              ],
         },
         {
           title: "Strategic Framework",
@@ -582,8 +579,21 @@ export const content = {
           ],
         },
         {
-          name: "Full Management",
+          name: "Monthly Calendar Posts",
           price: "$2,000",
+          period: "/mo",
+          features: [
+            "Monthly content calendar",
+            "20 branded designs",
+            "Captions & hashtags",
+            "Stories/reels templates",
+            "Brand visual consistency",
+            "Scheduling-ready delivery",
+          ],
+        },
+        {
+          name: "Full Management",
+          price: "$2,500",
           period: "/mo",
           recommended: true,
           features: [
@@ -593,19 +603,6 @@ export const content = {
             "Analytics & reporting",
             "Growth strategy",
             "Bi-weekly strategy calls",
-          ],
-        },
-        {
-          name: "Monthly Calendar Posts",
-          price: "$2,500",
-          period: "/mo",
-          features: [
-            "Monthly content calendar",
-            "20 branded designs",
-            "Captions & hashtags",
-            "Stories/reels templates",
-            "Brand visual consistency",
-            "Scheduling-ready delivery",
           ],
         },
       ],

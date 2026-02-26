@@ -40,18 +40,32 @@ export default function SocialMediaFrame() {
               transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
               className="bg-white/5 rounded-lg p-6 border border-white/10 flex flex-col hover:border-accent-muted/40 hover:shadow-[0_10px_40px_rgba(57,255,20,0.15)] transition-all"
             >
-              {pkg.recommended && (
-                <div className="text-[10px] uppercase tracking-widest text-accent-muted font-medium mb-3">
-                  Recommended
+              {/* Fixed-height top section so dividers align across cards */}
+              <div className="h-[140px] flex flex-col">
+                <div className="h-5 mb-1">
+                  {pkg.recommended && (
+                    <div className="text-[10px] uppercase tracking-widest text-accent-muted font-medium">
+                      Recommended
+                    </div>
+                  )}
                 </div>
-              )}
-              <h3 className="text-lg font-semibold text-white mb-2">
-                {pkg.name}
-              </h3>
-              <div className="mb-4">
-                <span className="text-3xl md:text-4xl font-bold text-accent-muted">
-                  {pkg.price}
-                </span>
+                <h3 className="text-lg font-semibold text-white mb-2">
+                  {pkg.name}
+                </h3>
+                <div className="mb-2">
+                  <span className="text-3xl md:text-4xl font-bold text-accent-muted">
+                    {pkg.price}
+                  </span>
+                </div>
+                <div>
+                  <span className={`inline-block px-2 py-0.5 text-[10px] uppercase tracking-widest font-medium rounded ${
+                    index === 0
+                      ? "bg-white/10 text-white/60"
+                      : "bg-accent-muted/15 text-accent-muted"
+                  }`}>
+                    {index === 0 ? "One-Time" : "Retainer"}
+                  </span>
+                </div>
               </div>
 
               <div className="w-full h-px bg-white/10 mb-4" />

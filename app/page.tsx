@@ -120,7 +120,6 @@ export default function Home() {
         <PerspectiveFrame />
         <DesignPhilosophyFrame />
         <WhatsIncludedFrame />
-        <WebsiteFrame />
         <SocialMediaFrame />
         <ProjectManagementFrame />
         <PricingFrame />

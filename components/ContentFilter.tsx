@@ -19,7 +19,6 @@ const SECTION_TAGS: Record<string, string[]> = {
   "perspective": ["Strategy", "Approach"],
   "design-philosophy": ["Design", "Approach"],
   "whats-included": ["Overview", "Scope"],
-  "website": ["Scope", "Website", "Commercial"],
   "social-media": ["Scope", "Social Media", "Commercial"],
   "project-management": ["Process", "Management"],
   "pricing": ["Commercial", "Pricing"],
